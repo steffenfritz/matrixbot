@@ -15,14 +15,14 @@ type AuthResponse struct {
 }
 
 // GetTokenJSON gets a session json object
-func GetTokenJSON(server string, username string, password string) AuthResponse {
+func GetTokenJSON(server string, username string, passwd string) AuthResponse {
 
 	authcontext := "/_matrix/client/r0/login"
 
 	requestBody, err := json.Marshal(map[string]string{
 		"type":     "m.login.password",
 		"user":     username,
-		"password": password,
+		"password": passwd,
 	})
 
 	e(err)
