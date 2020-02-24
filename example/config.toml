@@ -1,5 +1,4 @@
-[Connection]
-Server = 
-User =
-Password = 
-Roomname = 
+Server = ""
+User = ""
+Password = ""
+Roomname = ""

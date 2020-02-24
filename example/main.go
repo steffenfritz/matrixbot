@@ -7,11 +7,8 @@ import (
 
 func main() {
 
-	server := "https://example.com"
-	user := ""
-	password := ""
-
-	resp := matrixbot.GetTokenJSON(server, user, password)
+	c := matrixbot.ReadConfig("config.toml")
+	resp := matrixbot.GetTokenJSON(c.Server, c.User, c.Password)
 
 	fmt.Println(resp.Access_token)
 
