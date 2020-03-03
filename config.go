@@ -10,7 +10,7 @@ type Config struct {
 	Server   string
 	User     string
 	Password string
-	Roomname string
+	RoomID   string
 }
 
 func ReadConfig(confFile string) Config {
