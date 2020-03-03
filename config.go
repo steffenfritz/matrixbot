@@ -1,8 +1,9 @@
 package matrixbot
 
 import (
-	"github.com/BurntSushi/toml"
 	"log"
+
+	"github.com/BurntSushi/toml"
 )
 
 type Config struct {
@@ -19,4 +20,12 @@ func ReadConfig(confFile string) Config {
 	}
 
 	return config
+}
+
+func checkConfig(config Config) bool {
+	if len(config.Server) == 0 {
+		return false
+	}
+
+	return true
 }

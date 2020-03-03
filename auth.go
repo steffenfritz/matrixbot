@@ -7,11 +7,12 @@ import (
 	"net/http"
 )
 
+// AuthResponse is a struct that holds authentication information
 type AuthResponse struct {
-	Access_token string `json:"access_token"`
-	Device_id    string `json:"device_id"`
-	Home_server  string `json:"home_server"`
-	User_id      string `json:"user_id"`
+	AccessToken string `json:"access_token"`
+	DeviceID    string `json:"device_id"`
+	HomeServer  string `json:"home_server"`
+	UserID      string `json:"user_id"`
 }
 
 // GetTokenJSON gets a session json object
