@@ -1,0 +1,3 @@
+package matrixbot
+
+func GetInitialEvent() {}
