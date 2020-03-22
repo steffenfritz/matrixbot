@@ -1,7 +1,9 @@
 package main
 
 import (
-	"fmt"
+	"log"
+	"net/http"
+
 	"github.com/steffenfritz/matrixbot"
 )
 
@@ -10,6 +12,8 @@ func main() {
 	c := matrixbot.ReadConfig("config.toml")
 	resp := matrixbot.GetTokenJSON(c.Server, c.User, c.Password)
 
-	fmt.Println(resp.Access_token)
+	retCode := matrixbot.SendTXTToRoom(c, resp.AccessToken, "hello world")
+
+	log.Println(http.StatusText(retCode))
 
 }
